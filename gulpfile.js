@@ -34,7 +34,6 @@ gulp.task('style', function () {
         }))
         .pipe(cssnano())
         .pipe(sourcemaps.write())
-        .pipe(concat('app.css'))
         .pipe(gulp.dest(dest.styles))
         .pipe(browserSync.reload({
             stream: true
@@ -46,7 +45,6 @@ gulp.task('script', function () {
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(concat('app.js'))
         .pipe(gulp.dest(dest.scripts))
         .pipe(browserSync.reload({
             stream: true

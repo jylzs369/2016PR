@@ -1,0 +1,46 @@
+/*entire*/
+html, body {
+    font-family: 'microsoft yahei';
+    font-size: 20px;
+    background: #000;
+}
+.swiper-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*scenes*/
+.scene1 {
+    background: #f00;
+}
+.scene2 {
+    background: #550;
+}
+.scene3 {
+    background: #af5;
+}
+.scene4 {
+    background: #1af;
+}
+.scene5 {
+    background: #ff5;
+}
+.scene6 {
+    background: #0f0;
+}
+.scene7 {
+    background: #f0f;
+}
+.scene8 {
+    background: #f60;
+}
+.scene9 {
+    background: #0ff;
+}
