@@ -1,0 +1,30 @@
+{
+  "name": "html5 animate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp serve",
+    "build": "gulp build",
+    "watch": "gulp"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "glob": "^7.1.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "path": "^0.12.7"
+  },
+  "author": "ushio",
+  "license": "ISC"
+}
