@@ -55,49 +55,43 @@ $(function () {
 
     function triggerScene1(swiper) {
         console.log('entry scene1...');
-        setTimeout(function () {
-        }, 2000);
-        return;
         swiperAnimateCache(swiper);
+        swiperAnimate(swiper);
         var scene = $('.scene1');
-        var mark = scene.find('.mark');
         var typefont1_1 = scene.find('.typefont1-1');
-        mark.addClass('micro-bright');
-        setTimeout(function () {
-            typefont1_1.typed({
-                strings: [typefont1_1.attr('data-typefont')],
-                typeSpeed: 150,
-                preStringTyped: function () {
-                    audioTyping.play(); 
-                },
-                onStringTyped: function (swiper) {
-                    audioTyping.pause();
-                    typefont1_1.delay(2000).fadeOut();
-                    $('.typed-cursor').delay(1900).fadeOut(function(){
-                        typeCursor = $(this).remove();
-                        mark.addClass('bright');
-                        onLighted();
-                    });
-                }
-            });
-        }, 2000);
-
-        function onLighted () {
-            swiperAnimate(swiper);
-            setTimeout(function () {
-                $('.icon-location').addClass('move-in-down');
-            }, 2000);
-            setTimeout(function () {
-                $('.icon-light').show(0, function () {
-                    $('.house').addClass('onlighted');
-                    $('.icon-location').delay(2800).fadeOut();
-                    $('.icon-msg').delay(2800).fadeOut();
-                    $(this).delay(3000).hide(0, function () {
-                        $('.house').addClass('zoom');
-                    });
-                });
-            }, 3000);
-        }
+        var typefont1_2 = scene.find('.typefont1-2');
+        var typefont1_3 = scene.find('.typefont1-3');
+        var typefont1_4 = scene.find('.typefont1-4');
+        typefont1_1.typed({
+            strings: [typefont1_1.attr('data-typefont')],
+            typeSpeed: 150,
+            startDelay: 1500,
+            showCursor: false,
+            preStringTyped: function () {
+                audioTyping.play(); 
+            },
+            onStringTyped: function (swiper) {
+                audioTyping.pause();
+            }
+        });
+        typefont1_2.typed({
+            strings: [typefont1_2.attr('data-typefont')],
+            typeSpeed: 0,
+            startDelay: 2500 + 10000,
+            showCursor: false
+        });
+        typefont1_3.typed({
+            strings: [typefont1_3.attr('data-typefont')],
+            typeSpeed: 0,
+            startDelay: 8000 + 10000,
+            showCursor: false
+        });
+        typefont1_4.typed({
+            strings: [typefont1_4.attr('data-typefont')],
+            typeSpeed: 0,
+            startDelay: 14500 + 10000,
+            showCursor: false
+        });
     }
 
     function triggerScene2() {
@@ -137,11 +131,6 @@ $(function () {
     }
 
     function initScene1() {
-        $('.mark').removeClass('bright micro-bright');
-        $('.house').removeClass('zoom');
         $('.typefont1-1').text('').show();
-        $('.icon-location').removeClass('move-in-down');
-        $('.icon-light').hide();
-        $('.icon-msg').removeClass('bounceIn animated');
     }
 });

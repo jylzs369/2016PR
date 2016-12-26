@@ -24,6 +24,9 @@ html, body {
 .color-black {
     color: black;
 }
+.transparent {
+    opacity: 0;
+}
 .show {
     display: block;
 }
@@ -37,20 +40,6 @@ html, body {
 .scene1 {
     font-size: 150%;
 }
-.scene1 .house {
-    width: inherit;
-    height: inherit;
-    background: url(../images/bg-scene1.png) no-repeat center bottom;
-    background-size: cover;
-    transition: all 2s;
-    transform-origin: 42% 88%;
-}
-.scene1 .house.onlighted {
-    background: url(../images/bg-scene1-light.png) no-repeat center bottom;
-}
-.scene1 .house.zoom {
-    transform: scale(5);
-}
 .scene1 .bg-pattern {
     width: inherit;
     height: inherit;
@@ -61,25 +50,19 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: all 2s linear;
-}
-.scene1 .mark.dark {
     background: rgba(0, 0, 0, 1);
-}
-.scene1 .mark.micro-bright {
-    background: rgba(0, 0, 0, .7);
-}
-.scene1 .mark.bright {
-    background: rgba(0, 0, 0, 0);
+    animation: bright 1s linear .2s forwards, brighten 2s linear 5s forwards;
 }
 .scene1 .typefont1-1 {
     position: relative;
     font-size: 120%;
+    animation: fadeOut .5s linear 5s forwards;
 }
 .scene1 .icon-location {
     bottom: 35%;
     left: 52%;
     opacity: 0;
+    animation: moveInDown .3s linear 6.5s forwards;
 }
 .scene1 .icon-location:before {
     content: '';
@@ -90,6 +73,16 @@ html, body {
     background-size: contain;
     vertical-align: middle;
 }
+.scene1 .icon-light {
+    bottom: 12.5%;
+    left: 22.8%;
+    background: url(../images/icon-light.png) no-repeat;
+    background-size: contain;
+    width: 7.2em;
+    height: 7.2em;
+    opacity: 0;
+    animation: fadeIn 0s linear 7.5s forwards, fadeIn 0s linear 9s forwards;
+}
 .scene1 .icon-msg {
     bottom: 22.5%;
     left: 41%;
@@ -98,80 +91,209 @@ html, body {
     width: 2.8em;
     height: 2.8em;
 }
-.scene1 .icon-light {
-    bottom: 12.5%;
-    left: 22.8%;
-    background: url(../images/icon-light.png) no-repeat;
-    background-size: contain;
-    width: 7.2em;
-    height: 7.2em;
+.scene1 .distant {
+    animation: fadeOut 0s linear 9s forwards;
 }
-.workflow {
-    position: relative;
+.scene1 .house {
+    width: inherit;
+    height: inherit;
+    background: url(../images/bg-scene1.png) no-repeat center bottom;
+    background-size: cover;
+    transform-origin: 42% 88%;
+    animation: onlighted 0s linear 9s forwards, zoom 1s linear 9s forwards;
+}
+.scene1 .workflow {
+    position: absolute;
     width: 90%;
     height: 80%;
+    opacity: 0;
+    animation: fadeIn 0s linear 10s forwards, hide .1s linear 35s forwards;
 }
-.scene1 .icon-path0-wrap {
-    top: 30%;
-    left: 10%;
-    width: 3.367em;
-    height: 1.73em;
-    overflow: hidden;
-    animation: path0WrapAnimate 1s linear 0s forwards;
+.scene1 .path-wrap {
+    position: absolute;
+    overflow: hidden
 }
-.scene1 .icon-path0 {
+.scene1 .path {
     position: absolute;
     width: inherit;
     height: inherit;
-    background: url(../images/icon-path0.png) no-repeat;
-    animation: path0Animate 1s linear 0s forwards;
 }
-.scene1 .icon-path1-wrap {
-    top: 5%;
-    left: 9.5%;
+.scene1 .path0-wrap {
+    top: 25%;
+    left: 5.5%;
+    width: 3.367em;
+    height: 1.73em;
+    transform: translateX(3.367em);
+    animation: path0WrapAnimate .2s linear 15.5s forwards;
+}
+.scene1 .path0 {
+    background: url(../images/icon-path0.png) no-repeat;
+    transform: translateX(-100%);
+    animation: path0Animate .2s linear 15.5s forwards;
+}
+.scene1 .path1-wrap {
+    top: 0%;
+    left: 5%;
     width: 1.5em;
     height: 10.4em;
-    overflow: hidden;
     transform: translateY(10.4em);
-    animation: path1WrapAnimate 2s linear 1s forwards;
+    animation: path1WrapAnimate .5s linear 15.7s forwards;
 }
-.scene1 .icon-path1 {
-    position: absolute;
+.scene1 .path1 {
     width: 10.4em;
-    height: inherit;
     background: url(../images/icon-path1.png) no-repeat;
     transform: translateY(-100%);
-    animation: path1Animate 1s linear 1s forwards;
+    animation: path1Animate .25s linear 15.7s forwards;
 }
-.scene1 .icon-path2 {
+.scene1 .path2-wrap {
+    top: 1%;
+    left: 70%;
+    width: 0;
+    height: 17.433em;
+    transform: translateY(-15.933em);
+    animation: path2WrapAnimate 2s linear 21s forwards;
+}
+.scene1 .path2 {
+    width: 10.4em;
     background: url(../images/icon-path2.png) no-repeat;
+    transform: translateY(15.933em);
+    animation: path2Animate 2s linear 21s forwards;
 }
-.scene1 .icon-path3 {
+.scene1 .path3-wrap {
+    top: 65%;
+    left: 23%;
+    width: 15.8em;
+    height: 0;
+    transform: translateX(14em);
+    animation: path3WrapAnimate 2s linear 28s forwards;
+}
+.scene1 .path3 {
+    height: 8.167em;
+    transform: translateX(-14em);
     background: url(../images/icon-path3.png) no-repeat;
+    animation: path3Animate 2s linear 28s forwards;
 }
-.scene1 .icon-path4 {
+.scene1 .path4-wrap {
+    top: 48.9%;
+    left: 3%;
+    width: 5.167em;
+    height: 13.333em;
+    transform: translateY(13.333em);
+    animation: path4WrapAnimate 2s linear 30s forwards;
+}
+.scene1 .path4 {
     background: url(../images/icon-path4.png) no-repeat;
+    transform: translateY(-100%);
+    animation: path4Animate 2s linear 30s forwards;
+}
+.icon-user {
+    top: 41.5%;
+    left: 15%;
+    width: 2em;
+    height: 2.7em;
+    opacity: 0;
+    background: url(../images/icon-user.png) no-repeat;
+    background-size: cover;
+    animation: fadeIn .2s linear 10.2s forwards;
 }
 .scene1 .icon-request {
-    top: 29%;
-    left: 20%;
+    top: 23%;
+    left: 18%;
     width: 4.3em;
     height: 4.3em;
     background: url(../images/icon-request.gif) no-repeat;
+    transform: scale(1);
+    opacity: 0;
+    animation: fadeIn .3s linear 10.5s forwards, requestAnimate 1.2s linear 10.8s forwards;
 }
 .scene1 .icon-system {
+    top: -5.5%;
+    left: 50%;
+    width: 4.467em;
+    height: 4.467em;
+    opacity: 0;
+    animation: fadeIn .5s linear 15.8s forwards;
 }
 .scene1 .icon-gear-big {
-    background: url(../images/icon-gear-big.png) no-repeat;
+    position: absolute;
+    width: 3.367em;
+    height: 3.367em;
+    background: url(../images/icon-gear-big.png) no-repeat center center;
+    animation: bigGearAnimate 1s linear 16s forwards;
 }
 .scene1 .icon-gear-small {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    width: 2em;
+    height: 2em;
     background: url(../images/icon-gear-small.png) no-repeat;
+    animation: smallGearAnimate 1s linear 16s forwards;
 }
 .scene1 .icon-staff {
+    top: 53%;
+    left: 80%;
+    width: 3.667em;
+    height: 4.433em;
     background: url(../images/icon-staff.png) no-repeat;
+    transform-origin: center bottom;
+    opacity: 0;
+    animation: fadeIn .3s linear 22.5s forwards, staffAnimate 1s linear 22.7s forwards;
 }
 .scene1 .icon-water {
+    top: 60%;
+    left: 78%;
+    width: 4.833em;
+    height: 6.533em;
     background: url(../images/icon-water.png) no-repeat;
+    background-size: cover;
+    opacity: 0;
+    animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;
+}
+.scene1 .text-pop {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 90%;
+    line-height: 1.5em;
+    text-align: left;
+    width: 24em;
+    height: 6.889em;
+    background: url(../images/bg-pop.png) no-repeat; 
+    padding: 1em;
+    opacity: 0;
+}
+.scene1 .typefont1-2 {
+    animation: fadeIn .3s linear 12s forwards, fadeOut .2s linear 15s forwards;
+}
+.scene1 .typefont1-3 {
+    animation: fadeIn .3s linear 17.5s forwards, fadeOut .2s linear 20s forwards;
+}
+.scene1 .typefont1-4 {
+    animation: fadeIn .3s linear 24s forwards, fadeOut .2s linear 26s forwards;
+}
+.scene1 .text-time {
+    position: absolute;
+    font-size: 120%;
+    color: white;
+    opacity: 0;
+}
+.scene1 .time1 {
+    top: 0;
+    left: 0;
+    transform: rotate(-25deg);
+    animation: blink 1s linear 20.2s forwards;
+}
+.scene1 .time2 {
+    top: 32%;
+    left: 79%;
+    transform: rotate(90deg) translateY(-130%);
+    animation: blink 1s linear 26s forwards;
+}
+.scene1 .time3 {
+    top: 59%;
+    left: 7%;
+    transform: rotate(-25deg);
+    animation: blink 1s linear 33s forwards;
 }
 .scene2 {
     background: url(../images/bg-scene2.png), url(../images/bg-pattern.png) repeat 0 0;
@@ -210,6 +332,49 @@ html, body {
         opacity:1; 
     }
 }
+@keyframes show {
+    to {
+        display: block;
+    }
+}
+@keyframes hide {
+    to {
+        display: none;
+    }
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes bright {
+    to {
+        opacity: .7;
+    }
+}
+@keyframes brighten {
+    from {
+        opacity: .7;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes onlighted {
+    to {
+        background: url(../images/bg-scene1-light.png) no-repeat center bottom;
+    }
+}
+@keyframes zoom {
+    to {
+        transform: scale(5)
+    }
+}
 @keyframes rotateClockwise {
     to {
         transform: rotate(1turn);
@@ -238,7 +403,7 @@ html, body {
 }
 @keyframes moveInDown {
     from {
-        transform: translateY(-50%);
+        transform: translateY(-100%);
         opacity: 0;
     }
     to {
@@ -251,7 +416,7 @@ html, body {
         transform: translateX(3.367em);
     }
     100% {
-        Stransform: translateX(0);
+        transform: translateX(0);
     }
 }
 @keyframes path0Animate {
@@ -284,6 +449,148 @@ html, body {
         transform: translateY(0);
     }
 }
+@keyframes path2WrapAnimate {
+    0% {
+        width: 0;
+        transform: translateY(-15.933em);
+    }
+    30% {
+        width: 6.367em;
+        transform: translateY(-15.933em);
+    }
+    100% {
+        width: 6.367em;
+        transform: translateY(0);
+    }
+}
+@keyframes path2Animate {
+    0% {
+        transform: translateY(15.933em);
+    }
+    30% {
+        transform: translateY(15.933em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes path3WrapAnimate {
+    0% {
+        height: 0;
+        transform: translateX(14em);
+    }
+    30% {
+        height: 8.167em;
+        transform: translateX(14em);
+    }
+    100% {
+        height: 8.167em;
+        transform: translateX(0);
+    }
+}
+@keyframes path3Animate {
+    0% {
+        transform: translateX(-14em);
+    }
+    30% {
+        transform: translateX(-14em);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes path4WrapAnimate {
+    0% {
+        transform: translateY(13.333em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes path4Animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes requestAnimate {
+    0% {
+        transform: scale(1)
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(.8);
+    }
+    105% {
+        transform: scale(1);
+    }
+}
+@keyframes bigGearAnimate {
+    to {
+        transform: rotate(-45deg)
+    }
+}
+@keyframes smallGearAnimate {
+    to {
+        transform: rotate(60deg)
+    }
+}
+@keyframes staffAnimate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+@keyframes waterAppearAnimate {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes waterMoveAnimate{ 
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0) translateX(0);
+    }
+    15% {
+        opacity: 1;
+        transform: scale(1) translateY(80%) translateX(0);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1) translateY(80%) translateX(-350%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(-100%) translateX(-350%);
+    }
+}
+@keyframes waterRotateAnimate{ 
+    from{
+        opacity: 1;
+        transform: translateY(-100%) translateX(-350%) scale(1) rotate(0) ;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-130%) translateX(-300%) scale(0) rotate(3turn);
+    }
+}
 /*define animate class*/
 .slowest {
     animation-duration: 3s;
@@ -312,11 +619,6 @@ html, body {
 .spin-counterclockwise {
     animation-name: spinCounterclockwise;
     animation-timing-function: linear;
-}
-.move-in-down {
-    animation-name: moveInDown;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
 }
 .typed-cursor{
     color: #fff;
