@@ -1,7 +1,9 @@
 /*entire*/
+html {
+    font-size: 20px;
+}
 html, body {
     font-family: 'microsoft yahei';
-    font-size: 20px;
     background: #000;
 }
 .swiper-container {
@@ -22,9 +24,37 @@ html, body {
 .color-black {
     color: black;
 }
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.absolute {
+    position: absolute;
+}
 /*scenes*/
 .scene1 {
-    background: url(../images/bg-scene1.png), url(../images/bg-pattern.jpg);
+    font-size: 150%;
+}
+.scene1 .house {
+    width: inherit;
+    height: inherit;
+    background: url(../images/bg-scene1.png) no-repeat center bottom;
+    background-size: cover;
+    transition: all 2s;
+    transform-origin: 42% 88%;
+}
+.scene1 .house.onlighted {
+    background: url(../images/bg-scene1-light.png) no-repeat center bottom;
+}
+.scene1 .house.zoom {
+    transform: scale(5);
+}
+.scene1 .bg-pattern {
+    width: inherit;
+    height: inherit;
+    background: url(../images/bg-pattern.jpg) no-repeat 0 0;
     background-size: cover;
 }
 .scene1 .mark {
@@ -32,13 +62,116 @@ html, body {
     width: 100%;
     height: 100%;
     transition: all 2s linear;
+}
+.scene1 .mark.dark {
     background: rgba(0, 0, 0, 1);
 }
-.scene1 .mark.lightin {
+.scene1 .mark.micro-bright {
     background: rgba(0, 0, 0, .7);
 }
-.scene1 .typefont {
-    font-size: 180%;
+.scene1 .mark.bright {
+    background: rgba(0, 0, 0, 0);
+}
+.scene1 .typefont1-1 {
+    position: relative;
+    font-size: 120%;
+}
+.scene1 .icon-location {
+    bottom: 35%;
+    left: 52%;
+    opacity: 0;
+}
+.scene1 .icon-location:before {
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 1.8em;
+    background: url(../images/icon-location.png) no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+.scene1 .icon-msg {
+    bottom: 22.5%;
+    left: 41%;
+    background: url(../images/icon-msg.png) no-repeat;
+    background-size: contain;
+    width: 2.8em;
+    height: 2.8em;
+}
+.scene1 .icon-light {
+    bottom: 12.5%;
+    left: 22.8%;
+    background: url(../images/icon-light.png) no-repeat;
+    background-size: contain;
+    width: 7.2em;
+    height: 7.2em;
+}
+.workflow {
+    position: relative;
+    width: 90%;
+    height: 80%;
+}
+.scene1 .icon-path0-wrap {
+    top: 30%;
+    left: 10%;
+    width: 3.367em;
+    height: 1.73em;
+    overflow: hidden;
+    animation: path0WrapAnimate 1s linear 0s forwards;
+}
+.scene1 .icon-path0 {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/icon-path0.png) no-repeat;
+    animation: path0Animate 1s linear 0s forwards;
+}
+.scene1 .icon-path1-wrap {
+    top: 5%;
+    left: 9.5%;
+    width: 1.5em;
+    height: 10.4em;
+    overflow: hidden;
+    transform: translateY(10.4em);
+    animation: path1WrapAnimate 2s linear 1s forwards;
+}
+.scene1 .icon-path1 {
+    position: absolute;
+    width: 10.4em;
+    height: inherit;
+    background: url(../images/icon-path1.png) no-repeat;
+    transform: translateY(-100%);
+    animation: path1Animate 1s linear 1s forwards;
+}
+.scene1 .icon-path2 {
+    background: url(../images/icon-path2.png) no-repeat;
+}
+.scene1 .icon-path3 {
+    background: url(../images/icon-path3.png) no-repeat;
+}
+.scene1 .icon-path4 {
+    background: url(../images/icon-path4.png) no-repeat;
+}
+.scene1 .icon-request {
+    top: 29%;
+    left: 20%;
+    width: 4.3em;
+    height: 4.3em;
+    background: url(../images/icon-request.gif) no-repeat;
+}
+.scene1 .icon-system {
+}
+.scene1 .icon-gear-big {
+    background: url(../images/icon-gear-big.png) no-repeat;
+}
+.scene1 .icon-gear-small {
+    background: url(../images/icon-gear-small.png) no-repeat;
+}
+.scene1 .icon-staff {
+    background: url(../images/icon-staff.png) no-repeat;
+}
+.scene1 .icon-water {
+    background: url(../images/icon-water.png) no-repeat;
 }
 .scene2 {
     background: url(../images/bg-scene2.png), url(../images/bg-pattern.png) repeat 0 0;
@@ -103,6 +236,54 @@ html, body {
         transform: translate(50%, 50%) rotate(0turn) translate(-50%, -50%);
     }
 }
+@keyframes moveInDown {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes path0WrapAnimate {
+    0% {
+        transform: translateX(3.367em);
+    }
+    100% {
+        Stransform: translateX(0);
+    }
+}
+@keyframes path0Animate {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes path1WrapAnimate {
+    0% {
+        width: 1.5em;
+        transform: translateY(10.4em);
+    }
+    50% {
+        width: 1.5em;
+        transform: translateY(0);
+    }
+    100% {
+        width: 10.4em;
+        transform: translateY(0);
+    }
+}
+@keyframes path1Animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 /*define animate class*/
 .slowest {
     animation-duration: 3s;
@@ -132,8 +313,41 @@ html, body {
     animation-name: spinCounterclockwise;
     animation-timing-function: linear;
 }
+.move-in-down {
+    animation-name: moveInDown;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
 .typed-cursor{
     color: #fff;
     opacity: 1;
     animation: blink 0.7s infinite;
+}
+
+
+
+@media only screen and (max-device-width:768px) {
+    html {
+        font-size: 21.33px;
+    }
+}
+@media only screen and (max-device-width:720px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-device-width:414px) {
+    html {
+        font-size: 12.2px;
+    }
+}
+@media only screen and (max-device-width:375px) {
+    html {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-device-width:320px) {
+    html {
+        font-size: 9.5px;
+    }
 }
