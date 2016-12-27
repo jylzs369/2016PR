@@ -7,15 +7,20 @@ $(function () {
 
     //创建swiper
     var appSwiper = new Swiper('.swiper-container', {
+        initialSlide: 6,
+        direction : 'vertical',
         grabCursor: true,
         onInit: function (swiper) {
             //页面第一次加载时执行
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper); 
             triggerScene1(swiper);
         },
         onSlideChangeStart: function (swiper) {
             initStatus(swiper);
         },
         onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); 
             //页面滑动结束后执行
             var currPage = swiper.activeIndex;
             //滑动到相应页面时执行对应动画效果
@@ -33,19 +38,19 @@ $(function () {
                     triggerScene4(swiper);
                     break;
                 case 4:
-                    triggerScene5();
+                    triggerScene5(swiper);
                     break;
                 case 5:
-                    triggerScene6();
+                    triggerScene6(swiper);
                     break;
                 case 6:
-                    triggerScene7();
+                    triggerScene7(swiper);
                     break;
                 case 7:
-                    triggerScene8();
+                    triggerScene8(swiper);
                     break;
                 case 8:
-                    triggerScene9();
+                    triggerScene9(swiper);
                     break;
                 default:
                     break;
@@ -77,13 +82,13 @@ $(function () {
         typefont1_2.typed({
             strings: [typefont1_2.attr('data-typefont')],
             typeSpeed: 0,
-            startDelay: 2500 + 10000,
+            startDelay: 1500 + 10000,
             showCursor: false
         });
         typefont1_3.typed({
             strings: [typefont1_3.attr('data-typefont')],
             typeSpeed: 0,
-            startDelay: 8000 + 10000,
+            startDelay: 7000 + 10000,
             showCursor: false
         });
         typefont1_4.typed({
@@ -92,6 +97,9 @@ $(function () {
             startDelay: 14500 + 10000,
             showCursor: false
         });
+       /* setTimeout(function () {
+            swiper.slideTo(1);
+        }, 1000 * 40);*/
     }
 
     function triggerScene2() {
@@ -118,8 +126,9 @@ $(function () {
     function triggerScene7() {
         console.log('entry scene7...');
     }
-    function triggerScene8() {
+    function triggerScene8(swiper) {
         console.log('entry scene8...');
+        swiperAnimate(swiper);
     }
     function triggerScene9() {
         console.log('entry scene9...');

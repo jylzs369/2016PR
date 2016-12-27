@@ -1,6 +1,6 @@
 /*entire*/
 html {
-    font-size: 20px;
+    font-size: 30px;
 }
 html, body {
     font-family: 'microsoft yahei';
@@ -38,7 +38,7 @@ html, body {
 }
 /*scenes*/
 .scene1 {
-    font-size: 150%;
+    font-size: 100%;
 }
 .scene1 .bg-pattern {
     width: inherit;
@@ -61,8 +61,6 @@ html, body {
 .scene1 .icon-location {
     bottom: 35%;
     left: 52%;
-    opacity: 0;
-    animation: moveInDown .3s linear 6.5s forwards;
 }
 .scene1 .icon-location:before {
     content: '';
@@ -100,7 +98,47 @@ html, body {
     background: url(../images/bg-scene1.png) no-repeat center bottom;
     background-size: cover;
     transform-origin: 42% 88%;
-    animation: onlighted 0s linear 9s forwards, zoom 1s linear 9s forwards;
+    animation: onlighted 0s linear 8s forwards, zoom 1s linear 9s forwards, fadeOut .2s linear 35s forwards;
+}
+.scene1 .house-close {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/bg-house-close.jpg) no-repeat center top;
+    background-size: cover;
+    opacity: 0;
+    animation: fadeIn .3s linear 35s forwards, fadeOut .2s linear 40s forwards;
+}
+.scene1 .house-close .icon-user-close{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    width: 9.367em;
+    height: 12em;
+    margin-left: -4.683em;
+    background: url(../images/icon-user-close.png) no-repeat center top;
+    background-size: cover;
+    animation: userAnimate 1s linear 36s forwards infinite;
+}
+.scene1 .house-close .icon-water-close{
+    position: absolute;
+    top: 46%;
+    left: 56%;
+    width: 6.167em;
+    height: 8em;
+    background: url(../images/icon-water.png) no-repeat center top;
+    background-size: cover;
+}
+.scene1 .house-close .icon-laugh{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 24em;
+    height: 16.6em;
+    margin-left: -12em;
+    background: url(../images/icon-laugh.png) no-repeat center top;
+    background-size: cover;
+    animation: laughAnimate 1s linear 36s forwards infinite;
 }
 .scene1 .workflow {
     position: absolute;
@@ -171,7 +209,7 @@ html, body {
     height: 8.167em;
     transform: translateX(-14em);
     background: url(../images/icon-path3.png) no-repeat;
-    animation: path3Animate 2s linear 28s forwards;
+    animation: path3Animate 1.8 s linear 28s forwards;
 }
 .scene1 .path4-wrap {
     top: 48.9%;
@@ -184,7 +222,7 @@ html, body {
 .scene1 .path4 {
     background: url(../images/icon-path4.png) no-repeat;
     transform: translateY(-100%);
-    animation: path4Animate 2s linear 30s forwards;
+    animation: path4Animate 1.8s linear 30s forwards;
 }
 .icon-user {
     top: 41.5%;
@@ -246,7 +284,7 @@ html, body {
     width: 4.833em;
     height: 6.533em;
     background: url(../images/icon-water.png) no-repeat;
-    background-size: cover;
+    background-size: cover; 
     opacity: 0;
     animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;
 }
@@ -263,10 +301,10 @@ html, body {
     opacity: 0;
 }
 .scene1 .typefont1-2 {
-    animation: fadeIn .3s linear 12s forwards, fadeOut .2s linear 15s forwards;
+    animation: fadeIn .3s linear 11s forwards, fadeOut .2s linear 15s forwards;
 }
 .scene1 .typefont1-3 {
-    animation: fadeIn .3s linear 17.5s forwards, fadeOut .2s linear 20s forwards;
+    animation: fadeIn .3s linear 16.5s forwards, fadeOut .2s linear 19s forwards;
 }
 .scene1 .typefont1-4 {
     animation: fadeIn .3s linear 24s forwards, fadeOut .2s linear 26s forwards;
@@ -281,7 +319,7 @@ html, body {
     top: 0;
     left: 0;
     transform: rotate(-25deg);
-    animation: blink 1s linear 20.2s forwards;
+    animation: blink 1s linear 19.2s forwards;
 }
 .scene1 .time2 {
     top: 32%;
@@ -311,15 +349,192 @@ html, body {
     background: url(../images/bg-scene6.png), url(../images/bg-pattern.png) repeat 0 0;
 }
 .scene7 {
-    background: url(../images/bg-scene7.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/bg-scene7.jpg) center top;
 }
 .scene8 {
-    background: url(../images/bg-scene8.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/bg-scene8.png) center top, url(../images/bg-pattern.jpg);
+}
+.scene8 .cloud {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+.scene8 .cloud > div {
+    position: absolute;
+}
+.scene8 .cloud > div img {
+    width: 100%;
+}
+.scene8 .cloud .cloud1 {
+    z-index: 1;
+    right: -50%;
+    /*right: -25%;*/
+    top: 15%;
+    width: 90%;
+    animation: moveFromRightDouble 60s linear infinite alternate;
+}
+.scene8 .cloud .cloud2 {
+    z-index: 1;
+    top: 30%;
+    left: -60%;
+    /*left: -20%;*/
+    width: 80%;
+    animation: moveFromLeft 20s linear infinite alternate;
+}
+.scene8 .cloud .cloud3 {
+    z-index: 1;
+    top: 50%;
+    right: -45%;
+    width: 60%;
+    animation: moveFromRightHalf 15s linear infinite alternate;
+}
+.scene8 .cloud .cloud4 {
+    z-index: 3;
+    right: -30%;
+    /*right: -65%;*/
+    bottom: 0;
+    width: 90%;
+    animation: moveFromRight 20s linear infinite alternate;
+}
+.scene8 .cloud .cloud5 {
+    z-index: 3;
+    left: -30%;
+    /*left: -10%;*/
+    bottom: 0;
+    width: 55%;
+    animation: moveFromLeftHalf 20s linear infinite alternate;
+}
+.scene8 .cloud .cloud6 {
+    z-index: 3;
+    right: -60%;
+    /*right: -10%;*/
+    bottom: 0;
+    width: 90%;
+    animation: moveFromRightHalf 20s linear infinite alternate;
+}
+.scene8 .earth {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 8%;
+}
+.scene8 .icon-earth {
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+    right: 20%;
+    bottom: 0;
+    height: 36%;
+    background: url(../images/icon-earth.png) no-repeat center bottom;
+    background-size: contain;
+}
+.scene8 .house {
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    right: 20%;
+    bottom: 0;
+    height: 36%;
+}
+.scene8 .house > img {
+    display: block;
+    position: absolute;
+}
+.scene8 .house .house1 {
+    top: 35%;
+    left: -25%;
+    width: 32%;
+}
+.scene8 .house .house2 {
+    top: 11%;
+    left: -20%;
+    width: 35%;
+}
+.scene8 .house .house3 {
+    top: -28%;
+    left: -10%;
+    width: 54%;
+}
+.scene8 .house .house4 {
+    top: -49%;
+    right: 10%;
+    width: 34%;
+}
+.scene8 .house .house5 {
+    top: -27%;
+    right: -8%;
+    width: 40%;
+}
+.scene8 .house .house6 {
+    top: 44%;
+    right: -28%;
+    width: 36%;
+}
+.scene8 .house .house7 {
+    top: 27%;
+    right: -16%;
+    width: 25%;
+}
+.scene8 .bird {
+    position: absolute;
+    z-index: 4;
+    bottom: 5%;
+    left: -30%;
+    width: 5.167rem;
+    height: 4.133rem;
+    background: url(../images/icon-bird.png) no-repeat center center;
+    background-size: contain;
+    animation: fly 8s linear infinite backwards;
+}
+.scene8 .text {
+    position: absolute;
+    z-index: 5;
+    top: 3%;
+    left: 50%;
+    width: 24rem;
+    height: 24rem;
+    margin-left: -12rem;
+    background: url(../images/text-scene8.png) no-repeat center center;
+    background-size: contain;
 }
 .scene9 {
-    background: url(../images/bg-scene9.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/bg-pattern.jpg);
 }
-
+.scene9 .logo {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    height: 10%;
+    text-align: center;
+}
+.scene9 .logo > img,
+.scene9 .logo > div {
+    display: inline-block;
+}
+.scene9 .logo .logo-vanke {
+    width: 50%;
+}
+.scene9 .logo .line {
+    width: 1px;
+    height: 60%;
+    background: #9e9e9f;
+    margin: 0 8%;
+    opacity: 0;
+}
+.scene9 .logo .logo-owl {
+    width: 25%;
+}
+.scene9 .text-hello {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 8.6rem;
+    margin-left: -4.3em;
+}
 /*custom animate*/
 @keyframes blink{
     0% { 
@@ -334,12 +549,12 @@ html, body {
 }
 @keyframes show {
     to {
-        display: block;
+        visibility: visible;
     }
 }
 @keyframes hide {
     to {
-        display: none;
+        visibility: hidden;
     }
 }
 @keyframes fadeIn {
@@ -399,16 +614,6 @@ html, body {
     }
     to {
         transform: translate(50%, 50%) rotate(0turn) translate(-50%, -50%);
-    }
-}
-@keyframes moveInDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0%);
-        opacity: 1;
     }
 }
 @keyframes path0WrapAnimate {
@@ -591,6 +796,114 @@ html, body {
         transform: translateY(-130%) translateX(-300%) scale(0) rotate(3turn);
     }
 }
+@keyframes userAnimate {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes laughAnimate {
+	0% {
+		transform: scale3d(1,1,1)
+	}
+
+	10%,20% {
+		transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)
+	}
+
+	30%,50%,70%,90% {
+		transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)
+	}
+
+	40%,60%,80% {
+		transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)
+	}
+
+	100% {
+		transform: scale3d(1,1,1)
+	}
+}
+@keyframes moveFromLeftHalf {
+    to {
+        transform: translateX(50%);
+    }
+}
+@keyframes moveFromRightHalf {
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes moveFromLeft {
+    to {
+        transform: translateX(100%);
+    }
+}
+@keyframes moveFromRight {
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes moveFromLeftDouble {
+    to {
+        transform: translateX(200%);
+    }
+}
+@keyframes moveFromRightDouble {
+    to {
+        transform: translateX(-200%);
+    }
+}
+@keyframes fly {
+    0% {
+        bottom: 5%;
+        left: -12%;
+    }
+    10% {
+        bottom: 3%;
+        left: 0%;
+    }
+    20% {
+        bottom: 8%;
+        left: 12%;
+    }
+    30% {
+        bottom: 5%;
+        left: 24%;
+    }
+    40% {
+        bottom: 7%;
+        left: 36%;
+    }
+    50% {
+        bottom: 4%;
+        left: 48%;
+    }
+    60% {
+        bottom: 6%;
+        left: 60%;
+    }
+    70% {
+        bottom: 3%;
+        left: 72%;
+    }
+    80% {
+        bottom: 5%;
+        left: 84%;
+    }
+    90% {
+        bottom: 8%;
+        left: 96%;
+    }
+    100% {
+        bottom: 5%;
+        left: 120%;
+    }
+}
 /*define animate class*/
 .slowest {
     animation-duration: 3s;
@@ -630,26 +943,31 @@ html, body {
 
 @media only screen and (max-device-width:768px) {
     html {
-        font-size: 21.33px;
+        font-size: 32px !important;
     }
 }
 @media only screen and (max-device-width:720px) {
     html {
-        font-size: 20px;
+        font-size: 30px !important;
     }
 }
 @media only screen and (max-device-width:414px) {
     html {
-        font-size: 12.2px;
+        font-size: 17.25px !important;
+    }
+}
+@media only screen and (max-device-width:384px) {
+    html {
+        font-size: 16px !important;
     }
 }
 @media only screen and (max-device-width:375px) {
     html {
-        font-size: 11px;
+        font-size: 15.626px !important;
     }
 }
 @media only screen and (max-device-width:320px) {
     html {
-        font-size: 9.5px;
+        font-size: 12px !important;
     }
 }
