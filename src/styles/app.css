@@ -1,11 +1,15 @@
 /*entire*/
+
 html {
     font-size: 30px;
 }
-html, body {
+
+html,
+body {
     font-family: 'microsoft yahei';
     background: #000;
 }
+
 .swiper-container {
     position: absolute;
     top: 0;
@@ -13,30 +17,40 @@ html, body {
     right: 0;
     bottom: 0;
 }
+
 .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .color-white {
     color: white;
 }
+
 .color-black {
     color: black;
 }
+
 .transparent {
     opacity: 0;
 }
+
 .show {
     display: block;
 }
+
 .hide {
     display: none;
 }
+
 .absolute {
     position: absolute;
 }
+
+
 /*scenes*/
+
 .scene1 {
     font-size: 100%;
     background: url(../images/bg-pattern.jpg) no-repeat center bottom;
@@ -58,6 +72,7 @@ html, body {
     z-index: 2;
     background: black;
 }
+
 .scene1 .typefont1-1 {
     position: relative;
     z-index: 3;
@@ -72,6 +87,7 @@ html, body {
 .scene1 .distant > .icon-msg {
     position: absolute;
 }
+
 .scene1 .icon-location {
     font-size: 100%;
     bottom: 35%;
@@ -84,11 +100,13 @@ html, body {
     vertical-align: middle;
     margin-right: 3%;
 }
+
 .scene1 .icon-msg {
     bottom: 22.5%;
     left: 41%;
     width: 12%;
 }
+
 .scene1 .house {
     z-index: 4;
     background: url(../images/bg-house-light.png) no-repeat center bottom;
@@ -96,6 +114,7 @@ html, body {
     transform-origin: 42% 88%;
     /*zoom 1s linear 9s forwards, fadeOut .2s linear 35s forwards;*/
 }
+
 .scene1 .house-close {
     z-index: 5;
     background: url(../images/bg-house-close.jpg) no-repeat center top;
@@ -103,7 +122,8 @@ html, body {
     opacity: 0;
     /*animation: fadeIn .3s linear 35s forwards, fadeOut .2s linear 40s forwards;*/
 }
-.scene1 .house-close .icon-user-close{
+
+.scene1 .house-close .icon-user-close {
     position: absolute;
     top: 34%;
     left: 50%;
@@ -111,11 +131,13 @@ html, body {
     margin-left: -20%;
     /*animation: userAnimate 1s linear 36s forwards infinite;*/
 }
-.scene1 .house-close .icon-water-close{
+
+.scene1 .house-close .icon-water-close {
     position: absolute;
     width: 100%;
 }
-.scene1 .house-close .icon-laugh{
+
+.scene1 .house-close .icon-laugh {
     position: absolute;
     top: 0%;
     left: 50%;
@@ -123,6 +145,7 @@ html, body {
     margin-left: -45%;
     /*animation: laughAnimate 1s linear 36s forwards infinite;*/
 }
+
 .scene1 .workflow {
     position: absolute;
     z-index: 6;
@@ -138,10 +161,12 @@ html, body {
 .scene1 .path-wrap {
     overflow: hidden
 }
+
 .scene1 .path {
     width: inherit;
     height: inherit;
 }
+
 .scene1 .path0-wrap {
     top: 25%;
     left: 5.5%;
@@ -150,10 +175,12 @@ html, body {
     transform: translateX(3.367rem);
     /*animation: path0WrapAnimate .2s linear 15.5s forwards;*/
 }
+
 .scene1 .path0 {
     transform: translateX(-100%);
     /*animation: path0Animate .2s linear 15.5s forwards;*/
 }
+
 .scene1 .path1-wrap {
     top: 0;
     left: 5%;
@@ -162,11 +189,13 @@ html, body {
     transform: translateY(10.4rem);
     /*animation: path1WrapAnimate .5s linear 15.7s forwards;*/
 }
+
 .scene1 .path1 {
     width: 10.4rem;
     transform: translateY(-100%);
     /*animation: path1Animate .25s linear 15.7s forwards;*/
 }
+
 .scene1 .path2-wrap {
     top: 1%;
     left: 70%;
@@ -175,11 +204,13 @@ html, body {
     transform: translateY(-15.933rem);
     /*animation: path2WrapAnimate 2s linear 21s forwards;*/
 }
+
 .scene1 .path2 {
     width: 6.367rem;
     transform: translateY(15.933rem);
     /*animation: path2Animate 2s linear 21s forwards;*/
 }
+
 .scene1 .path3-wrap {
     top: 66%;
     left: 23%;
@@ -188,11 +219,13 @@ html, body {
     transform: translateX(14rem);
     /*animation: path3WrapAnimate 2s linear 28s forwards;*/
 }
+
 .scene1 .path3 {
     height: 8.167rem;
     transform: translateX(-100%);
     /*animation: path3Animate 1.8 s linear 28s forwards;*/
 }
+
 .scene1 .path4-wrap {
     top: 49.8%;
     left: 3%;
@@ -201,11 +234,13 @@ html, body {
     transform: translateY(13.333rem);
     /*animation: path4WrapAnimate 2s linear 30s forwards;*/
 }
+
 .scene1 .path4 {
     width: 5.167rem;
     transform: translateY(-100%);
     /*animation: path4Animate 1.8s linear 30s forwards;*/
 }
+
 .icon-user {
     top: 41%;
     left: 15.5%;
@@ -213,6 +248,7 @@ html, body {
     opacity: 0;
     /*animation: fadeIn .2s linear 10.2s forwards;*/
 }
+
 .scene1 .icon-request {
     top: 24%;
     left: 16%;
@@ -221,6 +257,7 @@ html, body {
     transform: scale(1);
     /*animation: fadeIn .3s linear 10.5s forwards, requestAnimate 1.2s linear 10.8s forwards;*/
 }
+
 .scene1 .icon-system {
     top: -5.5%;
     left: 50%;
@@ -229,12 +266,14 @@ html, body {
     opacity: 0;
     /*animation: fadeIn .5s linear 15.8s forwards;*/
 }
+
 .scene1 .icon-gear-big {
     position: absolute;
     width: 3.367em;
     height: 3.367em;
     /*animation: bigGearAnimate 1s linear 16s forwards;*/
 }
+
 .scene1 .icon-gear-small {
     position: absolute;
     right: 0;
@@ -243,6 +282,7 @@ html, body {
     height: 2em;
     /*animation: smallGearAnimate 1s linear 16s forwards;*/
 }
+
 .scene1 .icon-staff {
     top: 53%;
     left: 80%;
@@ -251,6 +291,7 @@ html, body {
     transform-origin: center bottom;
     /*animation: fadeIn .3s linear 22.5s forwards, staffAnimate 1s linear 22.7s forwards;*/
 }
+
 .scene1 .icon-water {
     top: 60%;
     left: 78%;
@@ -258,6 +299,7 @@ html, body {
     opacity: 0;
     /*animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;*/
 }
+
 .scene1 .text-pop {
     position: absolute;
     top: 5%;
@@ -274,51 +316,426 @@ html, body {
     padding: 1em;
     opacity: 0;
 }
+
 .scene1 .typefont1-2 {
     /*animation: fadeIn .3s linear 11s forwards, fadeOut .2s linear 15s forwards;*/
 }
+
 .scene1 .typefont1-3 {
     /*animation: fadeIn .3s linear 16.5s forwards, fadeOut .2s linear 19s forwards;*/
 }
+
 .scene1 .typefont1-4 {
     /*animation: fadeIn .3s linear 24s forwards, fadeOut .2s linear 26s forwards;*/
 }
+
 .scene1 .text-time {
     position: absolute;
     font-size: 120%;
     color: white;
     opacity: 0;
 }
+
 .scene1 .time1 {
     top: 0;
     left: 0;
     transform: rotate(-25deg);
     /*animation: blink 1s linear 19.2s forwards;*/
 }
+
 .scene1 .time2 {
     top: 32%;
     left: 79%;
     transform: rotate(90deg) translateY(-130%);
     /*animation: blink 1s linear 26s forwards;*/
 }
+
 .scene1 .time3 {
     top: 59%;
     left: 7%;
     transform: rotate(-25deg);
     /*animation: blink 1s linear 33s forwards;*/
 }
+
 .scene2 {
     background: url(../images/bg-scene2.png), url(../images/bg-pattern.png) repeat 0 0;
 }
+
+.scene2-bg1 {
+    background: url(../images/scene2-bg1.png) no-repeat;
+    background-size: contain;
+    width: 65%;
+    height: 26%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.scene2-bg2 {
+    background: url(../images/scene2-bg2.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1000
+}
+
+.scene2-bg3 {
+    background: url(../images/scene2-bg3.png) no-repeat;
+    /* width: 75%; */
+    background-size: contain;
+    height: 17%;
+    position: absolute;
+    bottom: -1%;
+    left: 0;
+    right: 0%;
+}
+
+.scene2-fade-in-left {
+    animation: path1Animate 1s linear 1s ease-out;
+}
+
 .scene3 {
     background: url(../images/bg-scene3.png), url(../images/bg-pattern.png) repeat 0 0;
 }
+
+.scene3-bg1 {
+    background: url(../images/scene3-bg1.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 74%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.scene3-computer {
+    background: url(../images/scene3-computer.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    /* height: 23.7em; */
+    position: absolute;
+    bottom: 10%;
+    left: 16%;
+    top: 53%;
+}
+
+.scene3-logo {
+    background: url(../images/scene3-logo.png) no-repeat;
+    background-size: cover;
+    width: 27%;
+    height: 19%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.scene3-bar {
+    background: url(../images/scene3-bar.png) no-repeat;
+    background-size: cover;
+    width: 47%;
+    height: 15%;
+    position: absolute;
+    bottom: 22%;
+    left: 41%;
+}
+
+.scene3-line {
+    background: url(../images/scene3-line.png) no-repeat;
+    background-size: cover;
+    width: 53%;
+    height: 16%;
+    position: absolute;
+    bottom: 30%;
+    left: 27%;
+}
+
+.scene3-gear-lg {
+    background: url(../images/scene3-gear-lg.png) no-repeat;
+    background-size: cover;
+    width: 23%;
+    height: 13%;
+    position: absolute;
+    bottom: 43%;
+    left: 67%;
+}
+
+.scene3-gear-sm {
+    background: url(../images/scene3-gear-sm.png) no-repeat;
+    background-size: cover;
+    width: 3.4em;
+    height: 3.4em;
+    position: absolute;
+    bottom: 50%;
+    left: 88%;
+}
+
+.scene3-gear-xs {
+    background: url(../images/scene3-gear-xs.png) no-repeat;
+    background-size: cover;
+    width: 7%;
+    height: 4%;
+    position: absolute;
+    bottom: 57%;
+    left: 86%;
+}
+
+.scene3-summary {
+    background: url(../images/scene3-summary.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* height: 36.8em; */
+    position: absolute;
+    bottom: 41%;
+    top: 1%;
+    left: 0%;
+}
+
 .scene4 {
-    background: url(../images/bg-scene4.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/scene4-bg-num.png), url(../images/scene4-bg-red.png) repeat 0 0;
 }
+
+.scene4-category0 {
+    background: url(../images/scene4-category1.png);
+    background-size: cover;
+    width: 2.3em;
+    height: 21.2em;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+.scene4-category1 {
+    background: url(../images/scene4-category1.png);
+    background-size: cover;
+    width: 2.3em;
+    height: 21.2em;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
+
+.scene4-category2 {
+    background: url(../images/scene4-category2.png);
+    background-size: cover;
+    width: 2.3em;
+    height: 21.3em;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+}
+
+.scene4-category3 {
+    background: url(../images/scene4-category3.png);
+    background-size: cover;
+    width: 2.4em;
+    height: 23.3em;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+}
+
+.scene4-category4 {
+    background: url(../images/scene4-category4.png);
+    background-size: cover;
+    width: 2.2em;
+    height: 17.1em;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+
+.scene4-category5 {
+    background: url(../images/scene4-category5.png);
+    background-size: cover;
+    width: 2.2em;
+    height: 12.8em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.scene4-category6 {
+    background: url(../images/scene4-category6.png);
+    background-size: cover;
+    width: 2.3em;
+    height: 19.5em;
+    position: absolute;
+    top: 100%;
+    left: 60%;
+}
+
+.scene4-category7 {
+    background: url(../images/scene4-category7.png);
+    background-size: cover;
+    width: 2.2em;
+    height: 19em;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+}
+
+.scene4-category8 {
+    background: url(../images/scene4-category8.png);
+    background-size: cover;
+    width: 2.4em;
+    height: 15.0em;
+    position: absolute;
+    top: 100%;
+    left: 80%;
+}
+
+.scene4-category9 {
+    background: url(../images/scene4-category9.png);
+    background-size: cover;
+    width: 2.4em;
+    height: 19.2em;
+    position: absolute;
+    top: 100%;
+    left: 90%;
+}
+
+.scene4-category10 {
+    background: url(../images/scene4-category10.png);
+    background-size: cover;
+    width: 2.1em;
+    height: 17.7em;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+}
+
+.scene4-category-white {
+    background: url(../images/scene4-category-white.png);
+    background-size: cover;
+    width: 2.0em;
+    height: 7.0em;
+    position: absolute;
+    bottom: 41%;
+    left: 0%;
+}
+
+.scene4-summary {
+    background: url(../images/scene4-summary.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    /* height: 28.5em; */
+    position: absolute;
+    bottom: 43%;
+    left: 4%;
+    top: 12%;
+}
+
+.scene4-category {
+    animation-iteration-count: 10000;
+}
+
 .scene5 {
-    background: url(../images/bg-scene5.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/bg-scene5.png);
 }
+
+.scene5-bg2 {
+    background: url(../images/scene5-bg2.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0;
+    top: 0;
+    animation-iteration-count: 1;
+}
+
+.scene5-left-hand {
+    background: url(../images/scene5-left-hand.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 34%;
+    position: absolute;
+    bottom: 55%;
+    left: 0%;
+    animation-iteration-count: 1;
+}
+
+.scene5-right-hand {
+    background: url(../images/scene5-right-hand.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 34%;
+    position: absolute;
+    bottom: 54.3%;
+    left: 66%;
+    animation-iteration-count: 1;
+}
+
+.scene5-citation {
+    background: url(../images/scene5-citation.png) no-repeat;
+    background-size: contain;
+    /* width: 100%; */
+    height: 25%;
+    position: absolute;
+    bottom: 60.5%;
+    left: 24%;
+    right: 24%;
+    animation-iteration-count: 1;
+}
+
+.scene5-persons {
+    background: url(../images/scene5-persons.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 29%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation-iteration-count: 1;
+}
+
+.scene5-person1 {
+    background: url(../images/scene5-person1.png);
+    background-size: contain;
+    width: 36.0em;
+    height: 13.7em;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation-iteration-count: 1;
+}
+
+.scene5-star {
+    background: url(../images/scene5-star.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 17%;
+    position: absolute;
+    bottom: 74%;
+    left: 13%;
+    animation-iteration-count: 1;
+}
+
+.scene5-star-sm {
+    background: url(../images/scene5-star.png) no-repeat;
+    background-size: contain;
+    background-size: contain;
+    width: 5.4em;
+    height: 11.2em;
+    position: absolute;
+    bottom: 66%;
+    left: 46%;
+    animation-iteration-count: 1;
+}
+
+.scene5-summary {
+    background: url(../images/scene5-summary.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    bottom: 26%;
+    left: 0%;
+    top: 30%;
+    animation-iteration-count: 1;
+}
+
 .scene6 {
     background: url(../images/bg-scene6.jpg) no-repeat 0 0;
     background-size: cover;
@@ -343,6 +760,7 @@ html, body {
     top: 35%;
     left: -15%;
 }
+
 .scene7 {
     background: url(../images/bg-scene7.jpg) no-repeat center top;
     background-size: cover;
@@ -438,22 +856,27 @@ html, body {
     width: 100%;
     background-size: contain;
 }
+
 .scene8 {
     background: url(../images/bg-scene8.png) no-repeat center top, url(../images/bg-pattern.jpg) no-repeat;
     background-size: cover;
 }
+
 .scene8 .cloud {
     position: absolute;
     width: 100%;
     height: 100%;
     font-size: 100%;
 }
-.scene8 .cloud > div {
+
+.scene8 .cloud>div {
     position: absolute;
 }
-.scene8 .cloud > div img {
+
+.scene8 .cloud>div img {
     width: 100%;
 }
+
 .scene8 .cloud .cloud1 {
     z-index: 1;
     right: -50%;
@@ -462,6 +885,7 @@ html, body {
     width: 90%;
     animation: moveFromRightDouble 60s linear infinite alternate;
 }
+
 .scene8 .cloud .cloud2 {
     z-index: 1;
     top: 30%;
@@ -470,6 +894,7 @@ html, body {
     width: 80%;
     animation: moveFromLeft 20s linear infinite alternate;
 }
+
 .scene8 .cloud .cloud3 {
     z-index: 1;
     top: 50%;
@@ -477,6 +902,7 @@ html, body {
     width: 60%;
     animation: moveFromRightHalf 15s linear infinite alternate;
 }
+
 .scene8 .cloud .cloud4 {
     z-index: 3;
     right: -30%;
@@ -485,6 +911,7 @@ html, body {
     width: 90%;
     animation: moveFromRight 20s linear infinite alternate;
 }
+
 .scene8 .cloud .cloud5 {
     z-index: 3;
     left: -30%;
@@ -493,6 +920,7 @@ html, body {
     width: 55%;
     animation: moveFromLeftHalf 20s linear infinite alternate;
 }
+
 .scene8 .cloud .cloud6 {
     z-index: 3;
     right: -60%;
@@ -501,6 +929,7 @@ html, body {
     width: 90%;
     animation: moveFromRightHalf 20s linear infinite alternate;
 }
+
 .scene8 .earth {
     position: absolute;
     z-index: 2;
@@ -509,6 +938,7 @@ html, body {
     right: 0;
     bottom: 8%;
 }
+
 .scene8 .icon-earth {
     position: absolute;
     z-index: 2;
@@ -519,6 +949,7 @@ html, body {
     background: url(../images/icon-earth.png) no-repeat center bottom;
     background-size: contain;
 }
+
 .scene8 .house {
     position: absolute;
     z-index: 1;
@@ -527,45 +958,54 @@ html, body {
     bottom: 0;
     height: 36%;
 }
-.scene8 .house > img {
+
+.scene8 .house>img {
     display: block;
     position: absolute;
 }
+
 .scene8 .house .house1 {
     top: 35%;
     left: -25%;
     width: 32%;
 }
+
 .scene8 .house .house2 {
     top: 11%;
     left: -20%;
     width: 35%;
 }
+
 .scene8 .house .house3 {
     top: -28%;
     left: -10%;
     width: 54%;
 }
+
 .scene8 .house .house4 {
     top: -49%;
     right: 10%;
     width: 34%;
 }
+
 .scene8 .house .house5 {
     top: -27%;
     right: -8%;
     width: 40%;
 }
+
 .scene8 .house .house6 {
     top: 44%;
     right: -28%;
     width: 36%;
 }
+
 .scene8 .house .house7 {
     top: 27%;
     right: -16%;
     width: 25%;
 }
+
 .scene8 .bird {
     position: absolute;
     z-index: 4;
@@ -592,6 +1032,7 @@ html, body {
 .scene8 .bird .bird5 {
     width: 18%;
 }
+
 .scene8 .text {
     position: absolute;
     z-index: 5;
@@ -599,10 +1040,12 @@ html, body {
     width: 100%;
     background-size: contain;
 }
+
 .scene9 {
     background: url(../images/bg-pattern.jpg) no-repeat center top;
     background-size: cover;
 }
+
 .scene9 .logo {
     position: absolute;
     top: 40%;
@@ -611,13 +1054,16 @@ html, body {
     height: 10%;
     text-align: center;
 }
-.scene9 .logo > img,
-.scene9 .logo > div {
+
+.scene9 .logo>img,
+.scene9 .logo>div {
     display: inline-block;
 }
+
 .scene9 .logo .logo-vanke {
     width: 50%;
 }
+
 .scene9 .logo .line {
     width: 1px;
     height: 60%;
@@ -625,9 +1071,11 @@ html, body {
     margin: 0 8%;
     opacity: 0;
 }
+
 .scene9 .logo .logo-owl {
     width: 25%;
 }
+
 .scene9 .text-hello {
     position: absolute;
     top: 55%;
@@ -635,6 +1083,8 @@ html, body {
     width: 8.6rem;
     margin-left: -4.3em;
 }
+
+
 /*custom animate*/
 @keyframes blink{
     0% { 
@@ -726,16 +1176,19 @@ html, body {
         /*opacity: 0;*/
     }
 }
+
 @keyframes rotateClockwise {
     to {
         transform: rotate(1turn);
     }
 }
+
 @keyframes rotateCounterclockwise {
     form {
         transform: rotate(1turn);
     }
 }
+
 @keyframes spinClockwise {
     from {
         transform: translate(50%, 100px) rotate(0turn) translate(-50%, -100px);
@@ -744,24 +1197,28 @@ html, body {
         transform: translate(50%, 100px) rotate(1turn) translate(-50%, -100px);
     }
 }
+
 @keyframes spinCounterclockwise {
-    from { 
+    from {
         transform: translate(50%, 50%) rotate(1turn) translate(-50%, -50%);
     }
     to {
         transform: translate(50%, 50%) rotate(0turn) translate(-50%, -50%);
     }
 }
+
 @keyframes path0WrapAnimate {
     to {
         transform: translateX(0);
     }
 }
+
 @keyframes path0Animate {
     to {
         transform: translateX(0);
     }
 }
+
 @keyframes path1WrapAnimate {
     0% {
         width: 1.5rem;
@@ -769,18 +1226,20 @@ html, body {
     }
     50% {
         width: 1.5rem;
-        transform: translateY(0);
+        transform: translateY
     }
     100% {
         width: 10.4rem;
         transform: translateY(0);
     }
 }
+
 @keyframes path1Animate {
     to {
         transform: translateY(0);
     }
 }
+
 @keyframes path2WrapAnimate {
     0% {
         width: 0;
@@ -795,6 +1254,7 @@ html, body {
         transform: translateY(0);
     }
 }
+
 @keyframes path2Animate {
     0% {
         transform: translateY(15.933em);
@@ -806,6 +1266,7 @@ html, body {
         transform: translateY(0);
     }
 }
+
 @keyframes path3WrapAnimate {
     0% {
         height: 0;
@@ -820,6 +1281,7 @@ html, body {
         transform: translateX(0);
     }
 }
+
 @keyframes path3Animate {
     0% {
         transform: translateX(-14em);
@@ -831,16 +1293,19 @@ html, body {
         transform: translateX(0);
     }
 }
+
 @keyframes path4WrapAnimate {
     to {
         transform: translateY(0);
     }
 }
+
 @keyframes path4Animate {
     to {
         transform: translateY(0);
     }
 }
+
 @keyframes requestAnimate {
     0% {
         opacity: 0;
@@ -860,16 +1325,19 @@ html, body {
         transform: scale(1);
     }
 }
+
 @keyframes bigGearAnimate {
     to {
         transform: rotate(-45deg)
     }
 }
+
 @keyframes smallGearAnimate {
     to {
         transform: rotate(60deg)
     }
 }
+
 @keyframes staffAnimate {
     0% {
         opacity: 0;
@@ -902,7 +1370,8 @@ html, body {
         opacity: 0;
     }
 }
-@keyframes waterMoveAnimate{ 
+
+@keyframes waterMoveAnimate {
     0% {
         opacity: 0;
         transform: scale(0);
@@ -928,6 +1397,7 @@ html, body {
         transform: translateY(-130%) translateX(-350%) scale(0) rotate(3turn)
     }
 }
+
 @keyframes userAnimate {
     0% {
         transform: translateY(0);
@@ -955,35 +1425,60 @@ html, body {
 		transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)
 	}
 
-	100% {
-		transform: scale3d(1,1,1)
-	}
+@keyframes laughAnimate {
+    0% {
+        transform: scale3d(1, 1, 1)
+    }
+    10%,
+    20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%,
+    60%,
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
 }
+
 @keyframes moveFromLeftHalf {
     to {
         transform: translateX(50%);
     }
 }
+
 @keyframes moveFromRightHalf {
     to {
         transform: translateX(-50%);
     }
 }
+
 @keyframes moveFromLeft {
     to {
         transform: translateX(100%);
     }
 }
+
 @keyframes moveFromRight {
     to {
         transform: translateX(-100%);
     }
 }
+
 @keyframes moveFromLeftDouble {
     to {
         transform: translateX(200%);
     }
 }
+
 @keyframes moveFromRightDouble {
     to {
         transform: translateX(-200%);
@@ -1081,16 +1576,22 @@ html, body {
         background-position: right 0;
     }
 }
+
+
 /*define animate class*/
+
 .slowest {
     animation-duration: 3s;
 }
+
 .slower {
     animation-duration: 2s;
 }
+
 .faster {
     animation-duration: .5s;
 }
+
 .fastest {
     animation-duration: .25s;
 }
@@ -1110,7 +1611,8 @@ html, body {
     animation-name: spinCounterclockwise;
     animation-timing-function: linear;
 }
-.typed-cursor{
+
+.typed-cursor {
     color: #fff;
     opacity: 1;
     animation: blink 0.7s infinite;
@@ -1262,26 +1764,31 @@ html, body {
         font-size: 32px !important;
     }
 }
+
 @media only screen and (max-device-width:720px) {
     html {
         font-size: 30px !important;
     }
 }
+
 @media only screen and (max-device-width:414px) {
     html {
         font-size: 17.25px !important;
     }
 }
+
 @media only screen and (max-device-width:384px) {
     html {
         font-size: 16px !important;
     }
 }
+
 @media only screen and (max-device-width:375px) {
     html {
         font-size: 15.626px !important;
     }
 }
+
 @media only screen and (max-device-width:320px) {
     html {
         font-size: 12px !important;

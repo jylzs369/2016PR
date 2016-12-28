@@ -12,11 +12,15 @@ $(function () {
         onInit: function (swiper) {
             //页面第一次加载时执行
             swiperAnimateCache(swiper);
-            swiperAnimate(swiper); 
+            swiperAnimate(swiper);
             triggerScene1(swiper);
         },
         onSlideChangeStart: function (swiper) {
             clearTypefont();
+        },
+        onSlideNextStart(swiper) {
+            triggerScene2();
+            triggerScene3();
         },
         onSlideChangeEnd: function (swiper) {
             swiperAnimateCache(swiper);
@@ -29,6 +33,8 @@ $(function () {
                     triggerScene1();
                     break;
                 case 1:
+                    break;
+                case 2:
                     triggerScene2();
                     break;
                 case 2:
@@ -71,7 +77,7 @@ $(function () {
             startDelay: 1500,
             showCursor: false,
             preStringTyped: function () {
-                audioTyping.play(); 
+                audioTyping.play();
             },
             onStringTyped: function () {
                 audioTyping.pause();
@@ -99,31 +105,63 @@ $(function () {
 
     function triggerScene2() {
         console.log('entry scene2...');
+        for (var i = 0; i < 200; i++) {
+            var imgUrl = ['images/scene2-pop-blue.png', 'images/scene2-pop-pink.png', 'images/scene2-pop-red.png', 'images/scene2-pop-orange.png', 'images/scene2-pop-yellow.png', 'images/scene2-pop-white.png']
+            $('.scene2')
+                .append(
+                    '<img src="' + imgUrl[Math.floor(Math.random() * 6)] + '" class="scene2-img' + i + ' ani" width="' + (Math.random() * 10 + 10) + '%" alt="">'
+                )
+            var animateEffect = ['fadeInRightBig', 'fadeInRight', 'fadeInUp', 'fadeInUpBig', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig']
+            // animateEffect[Math.floor(Math.random() * 8)]
+            $('.scene2-img' + i)
+                .attr('swiper-animate-effect', 'zoomIn')
+                .attr('swiper-animate-duration', '0.5s')
+                .attr('swiper-animate-delay', 0.8 + Math.random() * 3 + 's')
+                .css({
+                    position: 'absolute',
+                    left: Math.random() * 110 - 10 + '%',
+                    top: Math.random() * 110 - 10 + '%'
+                });
+        }
+        $('.scene2').append('<div class="scene2-bg2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="4s"></div>');
     }
 
     function triggerScene3() {
         console.log('entry scene3...');
+        for (var i = 0; i < 5; i++) {
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
+        }
     }
 
     function triggerScene4() {
         console.log('entry scene4...');
-
     }
 
     function triggerScene5() {
         console.log('entry scene5...');
-
     }
+
     function triggerScene6() {
         console.log('entry scene6...');
-
     }
+
     function triggerScene7() {
         console.log('entry scene7...');
     }
     function triggerScene8() {
         console.log('entry scene8...');
     }
+
     function triggerScene9() {
         console.log('entry scene9...');
     }
