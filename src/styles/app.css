@@ -39,210 +39,186 @@ html, body {
 /*scenes*/
 .scene1 {
     font-size: 100%;
+    background: url(../images/bg-pattern.jpg) no-repeat center bottom;
+    background-size: contain;
 }
-.scene1 .bg-pattern {
-    width: inherit;
-    height: inherit;
-    background: url(../images/bg-pattern.jpg) no-repeat 0 0;
-    background-size: cover;
-}
-.scene1 .mark {
+.scene1 > div {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 1);
-    animation: bright 1s linear .2s forwards, brighten 2s linear 5s forwards;
+}
+.scene1 .loading {
+    z-index: 99;
+    width: 15%;
+}
+.scene1 .loading img{
+    width: 100%;
+}
+.scene1 .mark {
+    z-index: 2;
+    background: black;
 }
 .scene1 .typefont1-1 {
     position: relative;
+    z-index: 3;
     font-size: 120%;
-    animation: fadeOut .5s linear 5s forwards;
+}
+.scene1 .distant {
+    z-index: 1;
+    background: url(../images/bg-house.png) no-repeat center bottom, url(../images/bg-house-light.png) no-repeat center bottom;
+    background-size: contain;
+}
+.scene1 .distant > .icon-location,
+.scene1 .distant > .icon-msg {
+    position: absolute;
 }
 .scene1 .icon-location {
+    font-size: 100%;
     bottom: 35%;
-    left: 52%;
+    right: 8%;
+    width: 40%;
+    height: 1.5em;
 }
-.scene1 .icon-location:before {
-    content: '';
-    display: inline-block;
-    width: 2em;
-    height: 1.8em;
-    background: url(../images/icon-location.png) no-repeat;
-    background-size: contain;
+.scene1 .icon-location img {
+    height: 100%;
     vertical-align: middle;
-}
-.scene1 .icon-light {
-    bottom: 12.5%;
-    left: 22.8%;
-    background: url(../images/icon-light.png) no-repeat;
-    background-size: contain;
-    width: 7.2em;
-    height: 7.2em;
-    opacity: 0;
-    animation: fadeIn 0s linear 7.5s forwards, fadeIn 0s linear 9s forwards;
+    margin-right: 3%;
 }
 .scene1 .icon-msg {
     bottom: 22.5%;
     left: 41%;
-    background: url(../images/icon-msg.png) no-repeat;
-    background-size: contain;
-    width: 2.8em;
-    height: 2.8em;
-}
-.scene1 .distant {
-    animation: fadeOut 0s linear 9s forwards;
+    width: 12%;
 }
 .scene1 .house {
-    width: inherit;
-    height: inherit;
-    background: url(../images/bg-scene1.png) no-repeat center bottom;
-    background-size: cover;
+    z-index: 4;
+    background: url(../images/bg-house-light.png) no-repeat center bottom;
+    background-size: contain;
     transform-origin: 42% 88%;
-    animation: onlighted 0s linear 8s forwards, zoom 1s linear 9s forwards, fadeOut .2s linear 35s forwards;
+    /*zoom 1s linear 9s forwards, fadeOut .2s linear 35s forwards;*/
 }
 .scene1 .house-close {
-    position: absolute;
-    width: inherit;
-    height: inherit;
+    z-index: 5;
     background: url(../images/bg-house-close.jpg) no-repeat center top;
     background-size: cover;
     opacity: 0;
-    animation: fadeIn .3s linear 35s forwards, fadeOut .2s linear 40s forwards;
+    /*animation: fadeIn .3s linear 35s forwards, fadeOut .2s linear 40s forwards;*/
 }
 .scene1 .house-close .icon-user-close{
     position: absolute;
     top: 34%;
     left: 50%;
-    width: 9.367em;
-    height: 12em;
-    margin-left: -4.683em;
-    background: url(../images/icon-user-close.png) no-repeat center top;
-    background-size: cover;
-    animation: userAnimate 1s linear 36s forwards infinite;
+    width: 40%;
+    margin-left: -20%;
+    /*animation: userAnimate 1s linear 36s forwards infinite;*/
 }
 .scene1 .house-close .icon-water-close{
     position: absolute;
-    top: 46%;
-    left: 56%;
-    width: 6.167em;
-    height: 8em;
-    background: url(../images/icon-water.png) no-repeat center top;
-    background-size: cover;
+    width: 100%;
 }
 .scene1 .house-close .icon-laugh{
     position: absolute;
     top: 0%;
     left: 50%;
-    width: 24em;
-    height: 16.6em;
-    margin-left: -12em;
-    background: url(../images/icon-laugh.png) no-repeat center top;
-    background-size: cover;
-    animation: laughAnimate 1s linear 36s forwards infinite;
+    width: 90%;
+    margin-left: -45%;
+    /*animation: laughAnimate 1s linear 36s forwards infinite;*/
 }
 .scene1 .workflow {
     position: absolute;
+    z-index: 6;
     width: 90%;
     height: 80%;
-    opacity: 0;
-    animation: fadeIn 0s linear 10s forwards, hide .1s linear 35s forwards;
+    /*animation: hide .1s linear 35s forwards;*/
+}
+.scene1 .workflow  div,
+.scene1 .workflow img,
+.scene1 .workflow > p {
+    position: absolute;
 }
 .scene1 .path-wrap {
-    position: absolute;
     overflow: hidden
 }
 .scene1 .path {
-    position: absolute;
     width: inherit;
     height: inherit;
 }
 .scene1 .path0-wrap {
     top: 25%;
     left: 5.5%;
-    width: 3.367em;
-    height: 1.73em;
-    transform: translateX(3.367em);
-    animation: path0WrapAnimate .2s linear 15.5s forwards;
+    width: 3.367rem;
+    height: 1.733rem;
+    transform: translateX(3.367rem);
+    /*animation: path0WrapAnimate .2s linear 15.5s forwards;*/
 }
 .scene1 .path0 {
-    background: url(../images/icon-path0.png) no-repeat;
     transform: translateX(-100%);
-    animation: path0Animate .2s linear 15.5s forwards;
+    /*animation: path0Animate .2s linear 15.5s forwards;*/
 }
 .scene1 .path1-wrap {
-    top: 0%;
+    top: 0;
     left: 5%;
-    width: 1.5em;
-    height: 10.4em;
-    transform: translateY(10.4em);
-    animation: path1WrapAnimate .5s linear 15.7s forwards;
+    width: 1.5rem;
+    height: 10.4rem;
+    transform: translateY(10.4rem);
+    /*animation: path1WrapAnimate .5s linear 15.7s forwards;*/
 }
 .scene1 .path1 {
-    width: 10.4em;
-    background: url(../images/icon-path1.png) no-repeat;
+    width: 10.4rem;
     transform: translateY(-100%);
-    animation: path1Animate .25s linear 15.7s forwards;
+    /*animation: path1Animate .25s linear 15.7s forwards;*/
 }
 .scene1 .path2-wrap {
     top: 1%;
     left: 70%;
     width: 0;
-    height: 17.433em;
-    transform: translateY(-15.933em);
-    animation: path2WrapAnimate 2s linear 21s forwards;
+    height: 17.433rem;
+    transform: translateY(-15.933rem);
+    /*animation: path2WrapAnimate 2s linear 21s forwards;*/
 }
 .scene1 .path2 {
-    width: 10.4em;
-    background: url(../images/icon-path2.png) no-repeat;
-    transform: translateY(15.933em);
-    animation: path2Animate 2s linear 21s forwards;
+    width: 6.367rem;
+    transform: translateY(15.933rem);
+    /*animation: path2Animate 2s linear 21s forwards;*/
 }
 .scene1 .path3-wrap {
-    top: 65%;
+    top: 66%;
     left: 23%;
-    width: 15.8em;
+    width: 15.8rem;
     height: 0;
-    transform: translateX(14em);
-    animation: path3WrapAnimate 2s linear 28s forwards;
+    transform: translateX(14rem);
+    /*animation: path3WrapAnimate 2s linear 28s forwards;*/
 }
 .scene1 .path3 {
-    height: 8.167em;
-    transform: translateX(-14em);
-    background: url(../images/icon-path3.png) no-repeat;
-    animation: path3Animate 1.8 s linear 28s forwards;
+    height: 8.167rem;
+    transform: translateX(-100%);
+    /*animation: path3Animate 1.8 s linear 28s forwards;*/
 }
 .scene1 .path4-wrap {
-    top: 48.9%;
+    top: 49.8%;
     left: 3%;
-    width: 5.167em;
-    height: 13.333em;
-    transform: translateY(13.333em);
-    animation: path4WrapAnimate 2s linear 30s forwards;
+    width: 5.167rem;
+    height: 13.333rem;
+    transform: translateY(13.333rem);
+    /*animation: path4WrapAnimate 2s linear 30s forwards;*/
 }
 .scene1 .path4 {
-    background: url(../images/icon-path4.png) no-repeat;
+    width: 5.167rem;
     transform: translateY(-100%);
-    animation: path4Animate 1.8s linear 30s forwards;
+    /*animation: path4Animate 1.8s linear 30s forwards;*/
 }
 .icon-user {
-    top: 41.5%;
-    left: 15%;
-    width: 2em;
-    height: 2.7em;
+    top: 41%;
+    left: 15.5%;
+    width: 10%;
     opacity: 0;
-    background: url(../images/icon-user.png) no-repeat;
-    background-size: cover;
-    animation: fadeIn .2s linear 10.2s forwards;
+    /*animation: fadeIn .2s linear 10.2s forwards;*/
 }
 .scene1 .icon-request {
-    top: 23%;
-    left: 18%;
-    width: 4.3em;
-    height: 4.3em;
-    background: url(../images/icon-request.gif) no-repeat;
+    top: 24%;
+    left: 16%;
+    width: 20%;
     transform: scale(1);
-    opacity: 0;
-    animation: fadeIn .3s linear 10.5s forwards, requestAnimate 1.2s linear 10.8s forwards;
+    /*animation: fadeIn .3s linear 10.5s forwards, requestAnimate 1.2s linear 10.8s forwards;*/
 }
 .scene1 .icon-system {
     top: -5.5%;
@@ -250,14 +226,13 @@ html, body {
     width: 4.467em;
     height: 4.467em;
     opacity: 0;
-    animation: fadeIn .5s linear 15.8s forwards;
+    /*animation: fadeIn .5s linear 15.8s forwards;*/
 }
 .scene1 .icon-gear-big {
     position: absolute;
     width: 3.367em;
     height: 3.367em;
-    background: url(../images/icon-gear-big.png) no-repeat center center;
-    animation: bigGearAnimate 1s linear 16s forwards;
+    /*animation: bigGearAnimate 1s linear 16s forwards;*/
 }
 .scene1 .icon-gear-small {
     position: absolute;
@@ -265,49 +240,46 @@ html, body {
     bottom: 5%;
     width: 2em;
     height: 2em;
-    background: url(../images/icon-gear-small.png) no-repeat;
-    animation: smallGearAnimate 1s linear 16s forwards;
+    /*animation: smallGearAnimate 1s linear 16s forwards;*/
 }
 .scene1 .icon-staff {
     top: 53%;
     left: 80%;
-    width: 3.667em;
-    height: 4.433em;
-    background: url(../images/icon-staff.png) no-repeat;
-    transform-origin: center bottom;
+    width: 20%;
     opacity: 0;
-    animation: fadeIn .3s linear 22.5s forwards, staffAnimate 1s linear 22.7s forwards;
+    transform-origin: center bottom;
+    /*animation: fadeIn .3s linear 22.5s forwards, staffAnimate 1s linear 22.7s forwards;*/
 }
 .scene1 .icon-water {
     top: 60%;
     left: 78%;
-    width: 4.833em;
-    height: 6.533em;
-    background: url(../images/icon-water.png) no-repeat;
-    background-size: cover; 
-    opacity: 0;
-    animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;
+    width: 20%;
+    /*animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;*/
 }
 .scene1 .text-pop {
-    position: relative;
+    position: absolute;
+    top: 5%;
+    left: 50%;
     box-sizing: border-box;
     font-size: 90%;
     line-height: 1.5em;
     text-align: left;
-    width: 24em;
-    height: 6.889em;
+    width: 21.6rem;
+    height: 6.2rem;
+    margin-left: -10.3rem;
     background: url(../images/bg-pop.png) no-repeat; 
+    background-size: cover;
     padding: 1em;
     opacity: 0;
 }
 .scene1 .typefont1-2 {
-    animation: fadeIn .3s linear 11s forwards, fadeOut .2s linear 15s forwards;
+    /*animation: fadeIn .3s linear 11s forwards, fadeOut .2s linear 15s forwards;*/
 }
 .scene1 .typefont1-3 {
-    animation: fadeIn .3s linear 16.5s forwards, fadeOut .2s linear 19s forwards;
+    /*animation: fadeIn .3s linear 16.5s forwards, fadeOut .2s linear 19s forwards;*/
 }
 .scene1 .typefont1-4 {
-    animation: fadeIn .3s linear 24s forwards, fadeOut .2s linear 26s forwards;
+    /*animation: fadeIn .3s linear 24s forwards, fadeOut .2s linear 26s forwards;*/
 }
 .scene1 .text-time {
     position: absolute;
@@ -319,19 +291,19 @@ html, body {
     top: 0;
     left: 0;
     transform: rotate(-25deg);
-    animation: blink 1s linear 19.2s forwards;
+    /*animation: blink 1s linear 19.2s forwards;*/
 }
 .scene1 .time2 {
     top: 32%;
     left: 79%;
     transform: rotate(90deg) translateY(-130%);
-    animation: blink 1s linear 26s forwards;
+    /*animation: blink 1s linear 26s forwards;*/
 }
 .scene1 .time3 {
     top: 59%;
     left: 7%;
     transform: rotate(-25deg);
-    animation: blink 1s linear 33s forwards;
+    /*animation: blink 1s linear 33s forwards;*/
 }
 .scene2 {
     background: url(../images/bg-scene2.png), url(../images/bg-pattern.png) repeat 0 0;
@@ -346,13 +318,127 @@ html, body {
     background: url(../images/bg-scene5.png), url(../images/bg-pattern.png) repeat 0 0;
 }
 .scene6 {
-    background: url(../images/bg-scene6.png), url(../images/bg-pattern.png) repeat 0 0;
+    background: url(../images/bg-scene6.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+.scene6 .axis {
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-scene6.jpg) no-repeat left top;
+    background-size: cover;
+}
+.scene6 .text-scene6-1,
+.scene6 .text-scene6-2 {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+.scene6 .text-scene6-1 {
+    top: 5%;
+    left: -2%;
+}
+.scene6 .text-scene6-2 {
+    top: 35%;
+    left: -15%;
 }
 .scene7 {
-    background: url(../images/bg-scene7.jpg) center top;
+    background: url(../images/bg-scene7.jpg) no-repeat center top;
+    background-size: cover;
+}
+.scene7 .star {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    right: 5%;
+    bottom: 5%;
+}
+.scene7 .star > img {
+    position: absolute;
+}
+.scene7 .star .star1 {
+    width: 8%;
+}
+.scene7 .star .star2 {
+    top: 40%;
+    right: 10%;
+    width: 4%;
+}
+.scene7 .star .star3 {
+    left: 15%;
+    bottom: 18%;
+    width: 5%;
+}
+.scene7 .star .star4 {
+    right: 0;
+    bottom: 0;
+    width: 6%;
+}
+.scene7 .circle {
+    position: absolute;
+    top: 26%;
+    right: 0;
+    left: 15%;
+    bottom: 6%;
+}
+.scene7 .circle > * {
+    position: absolute;
+}
+.scene7 .circle .track {
+    z-index: 2;
+    top: 9%;
+    right: 12%;
+    width: 48%;
+    opacity: 0;
+}
+.scene7 .circle .rocket-wrap {
+    z-index: 3;
+    top: 3%;
+    right: 10%;
+    width: 51%;
+    height: 70%;
+}
+.scene7 .circle .rocket {
+    position: absolute;
+    width: 100%;
+    left: 10%;
+    bottom: -5%;
+    width: 30%;
+}
+.scene7 .circle .mars {
+    top: 0;
+    right: 5%;
+    width: 18%;
+    opacity: 1;
+}
+.scene7 .circle .earth {
+    right: -31%;
+    bottom: 0;
+    width: 115%;
+}
+.scene7 .saturn {
+    position: absolute;
+    top: 1%;
+    left: -53%;
+    width: 19.467rem;
+    opacity: 1;
+}
+.scene7 .planet {
+    position: absolute;
+    bottom: 15%;
+    left: -16%;
+    width: 6.167rem;
+    opacity: 1;
+}
+.scene7 .text {
+    position: absolute;
+    z-index: 5;
+    top: 5%;
+    width: 100%;
+    background-size: contain;
 }
 .scene8 {
-    background: url(../images/bg-scene8.png) center top, url(../images/bg-pattern.jpg);
+    background: url(../images/bg-scene8.png) no-repeat center top, url(../images/bg-pattern.jpg) no-repeat;
+    background-size: cover;
 }
 .scene8 .cloud {
     position: absolute;
@@ -481,27 +567,39 @@ html, body {
 .scene8 .bird {
     position: absolute;
     z-index: 4;
-    bottom: 5%;
-    left: -30%;
-    width: 5.167rem;
-    height: 4.133rem;
-    background: url(../images/icon-bird.png) no-repeat center center;
-    background-size: contain;
-    animation: fly 8s linear infinite backwards;
+    width: 100%;
+    height: 100%;
+}
+.scene8 .bird > img {
+    position: absolute;
+    top: 80%;
+    right: 110%;
+}
+.scene8 .bird .bird1 {
+    width: 8%;
+}
+.scene8 .bird .bird2 {
+    width: 10%;
+}
+.scene8 .bird .bird3 {
+    width: 15%;
+}
+.scene8 .bird .bird4 {
+    width: 12%;
+}
+.scene8 .bird .bird5 {
+    width: 18%;
 }
 .scene8 .text {
     position: absolute;
     z-index: 5;
     top: 3%;
-    left: 50%;
-    width: 24rem;
-    height: 24rem;
-    margin-left: -12rem;
-    background: url(../images/text-scene8.png) no-repeat center center;
+    width: 100%;
     background-size: contain;
 }
 .scene9 {
-    background: url(../images/bg-pattern.jpg);
+    background: url(../images/bg-pattern.jpg) no-repeat center top;
+    background-size: cover;
 }
 .scene9 .logo {
     position: absolute;
@@ -538,56 +636,92 @@ html, body {
 /*custom animate*/
 @keyframes blink{
     0% { 
-        opacity:1; 
+        opacity:0; 
     }
     50% { 
+        opacity:1; 
+    }
+    100% { 
+        opacity:0; 
+    }
+}
+@keyframes blinking{
+    0% { 
+        opacity:0; 
+    }
+    40% { 
+        opacity:1; 
+    }
+    80% { 
         opacity:0; 
     }
     100% { 
         opacity:1; 
     }
 }
-@keyframes show {
-    to {
-        visibility: visible;
-    }
-}
-@keyframes hide {
-    to {
-        visibility: hidden;
-    }
-}
-@keyframes fadeIn {
-    to {
+@keyframes brighten {
+    0% {
         opacity: 1;
     }
-}
-@keyframes fadeOut {
-    to {
+    12.5% {
+        opacity: .7;
+    }
+    75% {
+        opacity: .7;
+    }
+    100% {
         opacity: 0;
     }
 }
-@keyframes bright {
-    to {
-        opacity: .7;
+@keyframes distantAnime {
+    0% {
+        background: url(../images/bg-house.png) no-repeat center bottom, url(../images/bg-house-light.png) no-repeat center bottom,;
+        background-size: contain;
     }
-}
-@keyframes brighten {
-    from {
-        opacity: .7;
+    49% {
+        background: url(../images/bg-house.png) no-repeat center bottom, url(../images/bg-house-light.png) no-repeat center bottom,;
+        background-size: contain;
     }
-    to {
+    49.1% {
+        background: url(../images/bg-house-light.png) no-repeat center bottom, url(../images/bg-house.png) no-repeat center bottom;
+        background-size: contain;
+    }
+    95% {
+        background: url(../images/bg-house-light.png) no-repeat center bottom, url(../images/bg-house.png) no-repeat center bottom;
+        background-size: contain;
+        opacity: 1;
+    }
+    100% {
+        background: url(../images/bg-house-light.png) no-repeat center bottom, url(../images/bg-house.png) no-repeat center bottom;
+        background-size: contain;
         opacity: 0;
     }
 }
-@keyframes onlighted {
-    to {
-        background: url(../images/bg-scene1-light.png) no-repeat center bottom;
+@keyframes houseAnime {
+    0% {
+        opacity: 0;
     }
-}
-@keyframes zoom {
-    to {
+    1% {
+        opacity: 1;
+        transform: scale(1)
+    }
+    5% {
         transform: scale(5)
+    }
+    12% {
+        transform: scale(5)
+    }
+    20% {
+        transform: scale(5)
+    }
+    90% {
+        transform: scale(5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 1;
+        /*opacity: 0;*/
     }
 }
 @keyframes rotateClockwise {
@@ -617,54 +751,45 @@ html, body {
     }
 }
 @keyframes path0WrapAnimate {
-    0% {
-        transform: translateX(3.367em);
-    }
-    100% {
+    to {
         transform: translateX(0);
     }
 }
 @keyframes path0Animate {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
+    to {
         transform: translateX(0);
     }
 }
 @keyframes path1WrapAnimate {
     0% {
-        width: 1.5em;
-        transform: translateY(10.4em);
+        width: 1.5rem;
+        transform: translateY(10.4rem);
     }
     50% {
-        width: 1.5em;
+        width: 1.5rem;
         transform: translateY(0);
     }
     100% {
-        width: 10.4em;
+        width: 10.4rem;
         transform: translateY(0);
     }
 }
 @keyframes path1Animate {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
+    to {
         transform: translateY(0);
     }
 }
 @keyframes path2WrapAnimate {
     0% {
         width: 0;
-        transform: translateY(-15.933em);
+        transform: translateY(-15.933rem);
     }
     30% {
-        width: 6.367em;
-        transform: translateY(-15.933em);
+        width: 6.367rem;
+        transform: translateY(-15.933rem);
     }
     100% {
-        width: 6.367em;
+        width: 6.367rem;
         transform: translateY(0);
     }
 }
@@ -682,14 +807,14 @@ html, body {
 @keyframes path3WrapAnimate {
     0% {
         height: 0;
-        transform: translateX(14em);
+        transform: translateX(14rem);
     }
     30% {
-        height: 8.167em;
-        transform: translateX(14em);
+        height: 8.167rem;
+        transform: translateX(14rem);
     }
     100% {
-        height: 8.167em;
+        height: 8.167rem;
         transform: translateX(0);
     }
 }
@@ -705,26 +830,22 @@ html, body {
     }
 }
 @keyframes path4WrapAnimate {
-    0% {
-        transform: translateY(13.333em);
-    }
-    100% {
+    to {
         transform: translateY(0);
     }
 }
 @keyframes path4Animate {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
+    to {
         transform: translateY(0);
     }
 }
 @keyframes requestAnimate {
     0% {
+        opacity: 0;
         transform: scale(1)
     }
     25% {
+        opacity: 1;
         transform: scale(.8);
     }
     50% {
@@ -749,51 +870,60 @@ html, body {
 }
 @keyframes staffAnimate {
     0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    5% {
+        opacity: 1;
         transform: rotate(0);
     }
     50% {
+        opacity: 1;
         transform: rotate(15deg);
     }
     100% {
+        opacity: 1;
         transform: rotate(6deg);
     }
 }
-@keyframes waterAppearAnimate {
+@keyframes fadeInOut {
     0% {
         opacity: 0;
-        transform: scale(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
     }
     100% {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 0;
     }
 }
 @keyframes waterMoveAnimate{ 
     0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    10% {
         opacity: 1;
         transform: scale(1) translateY(0) translateX(0);
     }
-    15% {
+    20% {
         opacity: 1;
-        transform: scale(1) translateY(80%) translateX(0);
+        transform: scale(1) translateY(100%) translateX(0);
     }
-    75% {
+    60% {
         opacity: 1;
-        transform: scale(1) translateY(80%) translateX(-350%);
+        transform: scale(1) translateY(100%) translateX(-350%);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-130%) translateX(-350%) scale(1) rotate(0) ;
     }
     100% {
         opacity: 1;
-        transform: scale(1) translateY(-100%) translateX(-350%);
-    }
-}
-@keyframes waterRotateAnimate{ 
-    from{
-        opacity: 1;
-        transform: translateY(-100%) translateX(-350%) scale(1) rotate(0) ;
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-130%) translateX(-300%) scale(0) rotate(3turn);
+        transform: translateY(-130%) translateX(-350%) scale(0) rotate(3turn)
     }
 }
 @keyframes userAnimate {
@@ -811,7 +941,6 @@ html, body {
 	0% {
 		transform: scale3d(1,1,1)
 	}
-
 	10%,20% {
 		transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)
 	}
@@ -858,50 +987,96 @@ html, body {
         transform: translateX(-200%);
     }
 }
-@keyframes fly {
+@keyframes birdFly1 {
+    to {
+        top: -10%;
+        right: -20%;
+    }
+}
+@keyframes birdFly2{
+    to {
+        top: 40%;
+        right: -20%;
+    }
+}
+@keyframes birdFly3 {
+    to {
+        top: 10%;
+        right: -20%;
+    }
+}
+@keyframes birdFly4 {
+    to {
+        top: 50%;
+        right: -20%;
+    }
+}
+@keyframes birdFly5 {
+    to {
+        top: 70%;
+        right: -20%;
+    }
+}
+@keyframes saturnRotate {
+    to {
+        opacity: 1;
+        transform: skew(10deg);
+    }
+}
+@keyframes planetRotate {
+    to {
+        opacity: 1;
+        transform: skew(10deg) rotate(-360deg);
+    }
+}
+@keyframes marsRotate {
+    to {
+        transform: skew(10deg) rotate(360deg);
+    }
+}
+@keyframes  starFlash {
+    to {
+        opacity: .3;
+        transform: scale(.8);
+    }
+}
+@keyframes rocketWrapMove {
     0% {
-        bottom: 5%;
-        left: -12%;
-    }
-    10% {
-        bottom: 3%;
-        left: 0%;
-    }
-    20% {
-        bottom: 8%;
-        left: 12%;
-    }
-    30% {
-        bottom: 5%;
-        left: 24%;
-    }
-    40% {
-        bottom: 7%;
-        left: 36%;
+        transform: rotate(30deg) translateX(0) scale(1);
     }
     50% {
-        bottom: 4%;
-        left: 48%;
-    }
-    60% {
-        bottom: 6%;
-        left: 60%;
-    }
-    70% {
-        bottom: 3%;
-        left: 72%;
-    }
-    80% {
-        bottom: 5%;
-        left: 84%;
-    }
-    90% {
-        bottom: 8%;
-        left: 96%;
+        transform: rotate(30deg) translateX(5em) scale(1);
     }
     100% {
-        bottom: 5%;
-        left: 120%;
+        transform: rotate(30deg) translateX(0) scale(1);
+    }
+}
+@keyframes rocketMove {
+    0% {
+        transform: translateY(0) rotate(-30deg) scale(1);
+    }
+    49% {
+        transform: translateY(-18em) rotate(0) scale(.1);
+    }
+    50% {
+        transform: translateY(-18em) rotate(90deg) scale(.1)
+    }
+    51% {
+        transform: translateY(-18em) totate(180deg) scale(.1)
+    }
+    99% {
+        transform: translateY(0) rotate(180deg) scale(1);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+@keyframes axisMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: right 0;
     }
 }
 /*define animate class*/
@@ -917,19 +1092,19 @@ html, body {
 .fastest {
     animation-duration: .25s;
 }
-.rotate-clockwise {
+.rotateClockwise {
     animation-name: rotateClockwise;
     animation-timing-function: linear;
 }
-.rotate-counterclockwise {
+.rotateCounterclockwise {
     animation-name: rotateCounterclockwise;
     animation-timing-function: linear;
 }
-.spin-clockwise {
+.spinClockwise {
     animation-name: spinClockwise;
     animation-timing-function: linear;
 }
-.spin-counterclockwise {
+.spinCounterclockwise {
     animation-name: spinCounterclockwise;
     animation-timing-function: linear;
 }
@@ -938,8 +1113,147 @@ html, body {
     opacity: 1;
     animation: blink 0.7s infinite;
 }
-
-
+/*scene 1*/
+.brighten {
+    animation-name: brighten;
+    animation-timing-function: linear;
+}
+.distantAnime {
+    animation-name: distantAnime;
+    animation-timing-function: linear;
+}
+.houseAnime {
+    animation-name: houseAnime;
+    animation-timing-function: linear;
+}
+.path0WrapAnimate {
+    animation-name: path0WrapAnimate;
+    animation-timing-function: linear;
+}
+.path0Animate {
+    animation-name: path0Animate;
+    animation-timing-function: linear;
+}
+.path1WrapAnimate {
+    animation-name: path1WrapAnimate;
+    animation-timing-function: linear;
+}
+.path1Animate {
+    animation-name: path1Animate;
+    animation-timing-function: linear;
+}
+.path2WrapAnimate {
+    animation-name: path2WrapAnimate;
+    animation-timing-function: linear;
+}
+.path2Animate {
+    animation-name: path2Animate;
+    animation-timing-function: linear;
+}
+.path3WrapAnimate {
+    animation-name: path3WrapAnimate;
+    animation-timing-function: linear;
+}
+.path3Animate {
+    animation-name: path3Animate;
+    animation-timing-function: linear;
+}
+.path4WrapAnimate {
+    animation-name: path4WrapAnimate;
+    animation-timing-function: linear;
+}
+.path4Animate {
+    animation-name: path4Animate;
+    animation-timing-function: linear;
+}
+.bigGearAnimate {
+    animation-name: bigGearAnimate;
+    animation-timing-function: linear;
+}
+.smallGearAnimate {
+    animation-name: smallGearAnimate;
+    animation-timing-function: linear;
+}
+.requestAnimate {
+    animation-name: requestAnimate;
+    animation-timing-function: linear;
+}
+.fadeInOut {
+    animation-name: fadeInOut;
+    animation-timing-function: linear;
+}
+.staffAnimate {
+    animation-name: staffAnimate;
+    animation-timing-function: linear;
+}
+.waterMoveAnimate {
+    animation-name: waterMoveAnimate;
+    animation-timing-function: linear;
+}
+.blinking {
+    animation-name: blinking;
+}
+.userAnimate {
+    animation-name: userAnimate;
+    animation-timing-function: linear;
+}
+.laughAnimate {
+    animation-name: laughAnimate;
+    animation-timing-function: linear;
+}
+/*scene 6*/
+.axisMove {
+    animation-name: axisMove;
+}
+/*scene 7*/
+.starFlash {
+    animation-name: starFlash;
+    animation-direction: alternate;
+}
+.marsRotate {
+    animation-name: marsRotate;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+.saturnRotate {
+    animation-name: saturnRotate;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+.planetRotate {
+    animation-name: planetRotate;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+.rocketWrapMove {
+    animation-name: rocketWrapMove;
+    animation-timing-function: ease-in-out;
+}
+.rocketMove {
+    animation-name: rocketMove;
+    animation-timing-function: ease-in-out;
+}
+/*scene 7*/
+.birdFly1 {
+    animation-name: birdFly1;
+    animation-timing-function: ease-in-out;
+}
+.birdFly2 {
+    animation-name: birdFly2;
+    animation-timing-function: linear;
+}
+.birdFly3 {
+    animation-name: birdFly3;
+    animation-timing-function: ease;
+}
+.birdFly4 {
+    animation-name: birdFly4;
+    animation-timing-function: ease-in;
+}
+.birdFly5 {
+    animation-name: birdFly5;
+    animation-timing-function: ease-out;
+}
 
 @media only screen and (max-device-width:768px) {
     html {

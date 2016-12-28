@@ -7,7 +7,7 @@ $(function () {
 
     //创建swiper
     var appSwiper = new Swiper('.swiper-container', {
-        initialSlide: 6,
+        initialSlide: 0,
         direction : 'vertical',
         grabCursor: true,
         onInit: function (swiper) {
@@ -17,7 +17,6 @@ $(function () {
             triggerScene1(swiper);
         },
         onSlideChangeStart: function (swiper) {
-            initStatus(swiper);
         },
         onSlideChangeEnd: function (swiper) {
             swiperAnimate(swiper); 
@@ -128,18 +127,9 @@ $(function () {
     }
     function triggerScene8(swiper) {
         console.log('entry scene8...');
-        swiperAnimate(swiper);
     }
     function triggerScene9() {
         console.log('entry scene9...');
     }
 
-    function initStatus (swiper) {
-        swiperAnimateCache(swiper);
-        initScene1();
-    }
-
-    function initScene1() {
-        $('.typefont1-1').text('').show();
-    }
 });
