@@ -217,6 +217,7 @@ html, body {
     top: 24%;
     left: 16%;
     width: 20%;
+    opacity: 0;
     transform: scale(1);
     /*animation: fadeIn .3s linear 10.5s forwards, requestAnimate 1.2s linear 10.8s forwards;*/
 }
@@ -254,6 +255,7 @@ html, body {
     top: 60%;
     left: 78%;
     width: 20%;
+    opacity: 0;
     /*animation: waterAppearAnimate 1s linear 27.5s forwards, waterMoveAnimate 3s linear 28.5s forwards, waterRotateAnimate 1s linear 32s forwards;*/
 }
 .scene1 .text-pop {
