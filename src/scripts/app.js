@@ -14,13 +14,13 @@ $(function () {
             swiperAnimateCache(swiper);
             swiperAnimate(swiper);
             triggerScene1(swiper);
+            triggerScene4();
+            triggerScene2();
         },
         onSlideChangeStart: function (swiper) {
             clearTypefont();
         },
         onSlideNextStart(swiper) {
-            triggerScene2();
-            triggerScene3();
         },
         onSlideChangeEnd: function (swiper) {
             swiperAnimateCache(swiper);
@@ -41,7 +41,7 @@ $(function () {
                     triggerScene3();
                     break;
                 case 3:
-                    triggerScene4();
+                    // triggerScene4(swiper);
                     break;
                 case 4:
                     triggerScene5();
@@ -112,7 +112,7 @@ $(function () {
                     '<img src="' + imgUrl[Math.floor(Math.random() * 6)] + '" class="scene2-img' + i + ' ani" width="' + (Math.random() * 10 + 10) + '%" alt="">'
                 )
             var animateEffect = ['fadeInRightBig', 'fadeInRight', 'fadeInUp', 'fadeInUpBig', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig']
-            // animateEffect[Math.floor(Math.random() * 8)]
+                // animateEffect[Math.floor(Math.random() * 8)]
             $('.scene2-img' + i)
                 .attr('swiper-animate-effect', 'zoomIn')
                 .attr('swiper-animate-duration', '0.5s')
@@ -127,24 +127,24 @@ $(function () {
     }
 
     function triggerScene3() {
-        console.log('entry scene3...');
-        for (var i = 0; i < 5; i++) {
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + Math.random() * i + 's" swiper-animate-delay="' + Math.random() * i + 's"></div>');
-        }
+        
     }
 
     function triggerScene4() {
         console.log('entry scene4...');
+        for (var i = 1; i < 10; i++) {
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+            $('.scene4').append('<div class="scene4-category' + Math.floor(Math.random() * 10) + ' ani scene4-category" swiper-animate-effect="bounceInDown" swiper-animate-duration="' + (Math.random() * i + 10) + 's" swiper-animate-delay="' + (Math.random() * i + i - 1) + 's"></div>');
+        }
     }
 
     function triggerScene5() {
